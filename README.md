@@ -129,4 +129,4 @@ simplegit -h
 4. Check the status regularly to see what files have been modified.
 5. Use branches when you're working on new features or experiments.
 6. Don't be afraid to make mistakes becasue I do and I made the thing!
-```
+
