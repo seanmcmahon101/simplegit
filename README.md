@@ -1,6 +1,8 @@
 # SimpleGit: A Beginner-Friendly Local Version Control System
+
 SimpleGit is designed for beginners and small projects (though it works well for larger projects too). It's a local version
 control system that's easy to use and doesn't require cloud integration. Perfect for those new to version control!
+
 ## Features
 - Easy to use with short command aliases
 - Local storage (no cloud integration required)
@@ -9,14 +11,65 @@ control system that's easy to use and doesn't require cloud integration. Perfect
 - Commit tagging
 - Diff viewing between commits
 - Automatic backups
-## Installation
-1. Make sure you have python installed
-2. Make sure the requirements is installed, currently just argsparse
-3. Clone the repo or download the zip file
-4. Place the SimpleGit folder wherever you'd like on your computer
-5. Add the folder path to your system's PATH variable
-6. Restart your terminal or command prompt
-7. You're ready to go!
+- 
+## Detailed Installation Guide
+
+### Step 1: Obtain SimpleGit
+
+#### Option A: Cloning the Repository
+1. Open your terminal or command prompt.
+2. Navigate to the directory where you want to store SimpleGit.
+3. Run the following command:
+   ```
+   git clone https://github.com/yourusername/SimpleGit.git
+   ```
+
+#### Option B: Downloading the ZIP file
+1. Go to the SimpleGit GitHub repository.
+2. Click on the "Code" button and select "Download ZIP".
+3. Once downloaded, extract the ZIP file to your desired location.
+
+### Step 2: Add SimpleGit to System PATH
+
+Adding SimpleGit to your system PATH allows you to run it from any directory in the terminal.
+
+#### For Windows:
+
+1. Right-click on "This PC" or "My Computer" and select "Properties".
+2. Click on "Advanced system settings".
+3. Click the "Environment Variables" button.
+4. Under "System variables", find and select the "Path" variable, then click "Edit".
+5. Click "New" and add the full path to the SimpleGit folder (e.g., C:\Users\YourUsername\SimpleGit).
+6. Click "OK" to close all dialog boxes.
+
+#### For macOS and Linux:
+
+1. Open your terminal.
+2. Open your shell configuration file (e.g., ~/.bash_profile, ~/.zshrc) in a text editor:
+   ```
+   nano ~/.bash_profile
+   ```
+3. Add the following line at the end of the file, replacing the path with your SimpleGit folder location:
+   ```
+   export PATH=$PATH:/path/to/SimpleGit
+   ```
+4. Save the file and exit the editor.
+5. Reload your shell configuration:
+   ```
+   source ~/.bash_profile
+   ```
+
+### Note: Why Use a Batch File on Windows?
+
+Windows doesn't have a built-in way to associate file extensions with command-line interpreters. When you type a command in the terminal, Windows looks for executable files (.exe, .com, .bat, etc.) in the directories listed in the PATH environment variable.
+
+Python files (.py) are not directly executable on Windows. By creating a batch file with the same name as our Python script, we provide Windows with an executable file it can find and run. The batch file then calls Python to execute our actual script. Essentially, its a work around.
+
+### Step 2: Verify Installation
+
+1. Open a new terminal or command prompt (this is important to load the updated PATH).
+2. Type `simplegit -h` and press Enter.
+3. If everything is set up correctly, you should see the help message for SimpleGit.
 ## Basic Commands
 Here are some basic commands to get you started:
 ### Initialize a Repository
