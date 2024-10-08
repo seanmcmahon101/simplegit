@@ -4,21 +4,10 @@ SimpleGit is a beginner-friendly local version control system that provides basi
 
 ## Installation
 
-1. Download the `simplegit.py` script.
-2. Make the script executable:
-   ```
-   chmod +x simplegit.py
-   ```
-3. Add SimpleGit to your PATH:
-   - Open your shell configuration file (e.g., `~/.bashrc`, `~/.zshrc`)
-   - Add the following line, replacing `/path/to/simplegit` with the actual path:
-     ```
-     export PATH=$PATH:/path/to/simplegit
-     ```
-   - Save the file and reload your shell configuration:
-     ```
-     source ~/.bashrc  # or source ~/.zshrc
-     ```
+1. Clone the Repo
+2. Place the folder path of the repo into your PATH variable
+3. Its best to restart your env at this point
+4. You should be good to go
 
 ## Commands
 
