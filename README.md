@@ -2,7 +2,8 @@
 
 ## Git for idiots, for if cloud computing P&!£%S you off
 
-SimpleGit is a beginner-friendly local version control system that provides basic functionalities for managing your code changes without cloud integration.
+I hate typing repetitive stuff so this was created, all commands have shortened versions for speed. This is designed to be beginner friendly, so if youve never used VCS before this is  good starting point. Also, this doesnt use cloud intergration, I wanted this to be as simple as possible. Enjoy!
+
 
 ## Installation
 
