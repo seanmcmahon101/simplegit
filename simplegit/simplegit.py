@@ -573,6 +573,9 @@ def main():
       description="SimpleGit: An Advanced Beginner-Friendly Local Version Control System",
       formatter_class=argparse.RawTextHelpFormatter
   )
+  """
+  The below is just evil, i dont apologise
+  """
   subparsers = parser.add_subparsers(title="Commands", dest="command")
   parser_init = subparsers.add_parser('init', aliases=['i'], help='Initialize a new repository')
   parser_commit = subparsers.add_parser('commit', aliases=['c'], help='Commit current changes')
