@@ -4,6 +4,7 @@ SimpleGit is designed for beginners and small projects (though it works well for
 control system that's easy to use and doesn't require cloud integration. Perfect for those new to version control!
 
 ## Features
+
 - Easy to use with short command aliases
 - Local storage (no cloud integration required)
 - Multiple backup locations
@@ -20,11 +21,13 @@ control system that's easy to use and doesn't require cloud integration. Perfect
 1. Open your terminal or command prompt.
 2. Navigate to the directory where you want to store SimpleGit.
 3. Run the following command:
+   
    ```
    git clone https://github.com/yourusername/SimpleGit.git
    ```
 
 #### Option B: Downloading the ZIP file
+
 1. Go to the SimpleGit GitHub repository.
 2. Click on the "Code" button and select "Download ZIP".
 3. Once downloaded, extract the ZIP file to your desired location.
@@ -46,15 +49,21 @@ Adding SimpleGit to your system PATH allows you to run it from any directory in 
 
 1. Open your terminal.
 2. Open your shell configuration file (e.g., ~/.bash_profile, ~/.zshrc) in a text editor:
+   
    ```
    nano ~/.bash_profile
    ```
-3. Add the following line at the end of the file, replacing the path with your SimpleGit folder location:
+   
+4. Add the following line at the end of the file, replacing the path with your SimpleGit folder location:
+   
    ```
    export PATH=$PATH:/path/to/SimpleGit
    ```
-4. Save the file and exit the editor.
-5. Reload your shell configuration:
+   
+6. Save the file and exit the editor.
+   
+8. Reload your shell configuration:
+   
    ```
    source ~/.bash_profile
    ```
