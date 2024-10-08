@@ -10,11 +10,13 @@ control system that's easy to use and doesn't require cloud integration. Perfect
 - Diff viewing between commits
 - Automatic backups
 ## Installation
-1. Clone the repo or download the zip file
-2. Place the SimpleGit folder wherever you'd like on your computer
-3. Add the folder path to your system's PATH variable
-4. Restart your terminal or command prompt
-5. You're ready to go!
+1. Make sure you have python installed
+2. Make sure the requirements is installed, currently just argsparse
+3. Clone the repo or download the zip file
+4. Place the SimpleGit folder wherever you'd like on your computer
+5. Add the folder path to your system's PATH variable
+6. Restart your terminal or command prompt
+7. You're ready to go!
 ## Basic Commands
 Here are some basic commands to get you started:
 ### Initialize a Repository
