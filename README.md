@@ -6,7 +6,7 @@ SimpleGit is a beginner-friendly local version control system that provides basi
 
 ## Installation
 
-1. Clone the Repo
+1. Clone the Repo, or download the zip and place wherever youd like
 2. Place the folder path of the repo into your PATH variable
 3. Its best to restart your env at this point
 4. You should be good to go
