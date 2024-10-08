@@ -1,4 +1,4 @@
-#### Welcome to simplegit
+### Welcome to simplegit
 
 ### Git for idiots
 
