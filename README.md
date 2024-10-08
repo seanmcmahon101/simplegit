@@ -1,6 +1,6 @@
 # SimpleGit
 
-## Git for idiots, for if cloud computing P&!£%S you off
+## VCS for Beginners and small projects (big projects work aswell)
 
 I hate typing repetitive stuff so this was created, all commands have shortened versions for speed. This is designed to be beginner friendly, so if youve never used VCS before this is  good starting point. Also, this doesnt use cloud intergration, I wanted this to be as simple as possible. Enjoy!
 
