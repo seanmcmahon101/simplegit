@@ -128,7 +128,5 @@ simplegit -h
 3. Use meaningful commit messages to describe what you've changed.
 4. Check the status regularly to see what files have been modified.
 5. Use branches when you're working on new features or experiments.
-6. Don't be afraid to make mistakes - you can always go back to a previous commit!
-Enjoy using SimpleGit for your projects! Remember, practice makes perfect. The more you use version control, the
-more natural it will become.
+6. Don't be afraid to make mistakes becasue I do and I made the thing!
 ```
