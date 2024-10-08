@@ -1,3 +1,7 @@
+#### Welcome to simplegit
+
+### Git for idiots
+
 ### Installation
 
 1. **Prerequisites:**
