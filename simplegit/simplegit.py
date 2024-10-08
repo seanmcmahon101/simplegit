@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 SimpleGit: A Beginner-Friendly Local Version Control System
 
@@ -16,26 +15,21 @@ import time
 from datetime import datetime
 import filecmp
 
-# Constants for repository
 REPO_DIR = ".simplegit"
 LOGS_DIR = "logs"
 CONFIG_FILE = "config.json"
-
 
 def get_repo_path():
   """Returns the absolute path to the repository directory."""
   return os.path.join(os.getcwd(), REPO_DIR)
 
-
 def get_logs_path():
   """Returns the absolute path to the logs directory."""
   return os.path.join(get_repo_path(), LOGS_DIR)
 
-
 def get_config_path():
   """Returns the absolute path to the config file."""
   return os.path.join(get_repo_path(), CONFIG_FILE)
-
 
 def init_repository(args):
   """Initializes a new local repository."""
@@ -44,14 +38,12 @@ def init_repository(args):
       print("Repository already initialized.")
       return
   os.makedirs(get_logs_path())
-  # Create a default config
   config = {
       "logs_directory": get_logs_path()
   }
   with open(get_config_path(), 'w') as config_file:
       json.dump(config, config_file, indent=4)
   print(f"Initialized empty SimpleGit repository in {repo_path}")
-
 
 def load_config():
   """Loads the repository configuration."""
@@ -61,8 +53,6 @@ def load_config():
       sys.exit(1)
   with open(config_path, 'r') as config_file:
       return json.load(config_file)
-
-
 def commit_changes(args):
   """Commits the current state of the repository."""
   config = load_config()
@@ -72,14 +62,12 @@ def commit_changes(args):
       print("Repository not initialized. Please run 'init' first.")
       sys.exit(1)
 
-  # Create a new commit directory with timestamp
   timestamp = datetime.now().strftime("%Y%m%d%H%M%S")
   commit_title = args.title.replace(' ', '_')
   commit_dir_name = f"{timestamp}_{commit_title}"
   commit_path = os.path.join(logs_dir, commit_dir_name)
   os.makedirs(commit_path)
 
-  # Copy all files and directories except the .simplegit directory
   for item in os.listdir(os.getcwd()):
       if item == REPO_DIR:
           continue
@@ -90,7 +78,6 @@ def commit_changes(args):
       else:
           shutil.copy2(s, d)
 
-  # Save commit message
   commit_info = {
       "title": args.title,
       "timestamp": timestamp,
@@ -100,7 +87,6 @@ def commit_changes(args):
       json.dump(commit_info, info_file, indent=4)
 
   print(f"Committed changes as '{args.title}'.")
-
 
 def view_logs(args):
   """Displays the commit logs."""
@@ -129,7 +115,6 @@ def view_logs(args):
       print(f"Date: {readable_time}")
       print(f"Description: {commit_info['description']}\n")
 
-
 def check_status(args):
   """Checks the status of the repository."""
   config = load_config()
@@ -139,7 +124,6 @@ def check_status(args):
       print("No commits to compare with.")
       return
 
-  # Get the latest commit
   commits = sorted(os.listdir(logs_dir), reverse=True)
   if not commits:
       print("No commits to compare with.")
@@ -147,7 +131,6 @@ def check_status(args):
   latest_commit = commits[0]
   latest_commit_path = os.path.join(logs_dir, latest_commit)
 
-  # Compare current files with the latest commit
   changes = []
   for item in os.listdir(os.getcwd()):
       if item == REPO_DIR:
@@ -157,7 +140,6 @@ def check_status(args):
       if not os.path.exists(commit_path):
           changes.append(f"Added: {item}")
       elif os.path.isdir(current_path):
-          # For simplicity, not doing deep comparison for directories
           continue
       else:
           if not filecmp.cmp(current_path, commit_path):
@@ -180,7 +162,7 @@ def pull_commit(args):
       print("No commits found.")
       return
 
-  # Find the commit directory
+  #commit directory
   commits = os.listdir(logs_dir)
   selected_commit = None
   for commit in commits:
@@ -195,8 +177,7 @@ def pull_commit(args):
   commit_path = os.path.join(logs_dir, selected_commit)
   print(f"Pulling code from commit '{selected_commit}'...")
 
-  # Copy files from the commit to the current directory
-  # Warning: This will overwrite existing files
+  # Warning! This will overwrite existing files
   for item in os.listdir(commit_path):
       if item == "commit_info.json":
           continue
@@ -218,8 +199,6 @@ def backup_changes(args):
   print(f"Starting backup every {interval} seconds. Press Ctrl+C to stop.")
   try:
       while True:
-          # Check for changes before committing
-          # You can enhance this to commit only if there are changes
           commit_args = argparse.Namespace(
               title=f"{args.title} {datetime.now().strftime('%Y-%m-%d %H_%M_%S')}",
               description="Automatic backup"
@@ -235,30 +214,17 @@ def main():
       description="SimpleGit: A Beginner-Friendly Local Version Control System"
   )
   subparsers = parser.add_subparsers(title="Commands", dest="command")
-
-  # Init command
   parser_init = subparsers.add_parser('init', aliases=['i'], help='Initialize a new repository')
-
-  # Commit command
   parser_commit = subparsers.add_parser('commit', aliases=['c'], help='Commit current changes')
   parser_commit.add_argument('-m', '--title', required=True, help='Commit title')
   parser_commit.add_argument('-d', '--description', help='Commit description')
-
-  # Log command
   parser_log = subparsers.add_parser('log', aliases=['lg'], help='Show commit logs')
-
-  # Status command
   parser_status = subparsers.add_parser('status', aliases=['st'], help='Show status of repository')
-
-  # Pull command
   parser_pull = subparsers.add_parser('pull', aliases=['p'], help='Pull code from a specific commit')
   parser_pull.add_argument('-c', '--commit', required=True, help='Commit timestamp or title to pull from')
-
-  # Backup command
   parser_backup = subparsers.add_parser('backup', aliases=['b'], help='Automatically commit changes every x amount of time')
   parser_backup.add_argument('-t', '--time', type=int, required=True, help='Time interval in seconds between backups')
   parser_backup.add_argument('-m', '--title', default="Auto backup", help='Commit title for backups')
-
   args = parser.parse_args()
 
   if args.command in ['init', 'i']:
