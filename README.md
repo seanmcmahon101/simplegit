@@ -71,7 +71,7 @@ or
 simplegit b -t 300 -m "Auto backup"
 ```
 This starts an automatic backup every 5 minutes (300 seconds).
-## Advanced Features
+## Advanced Features AKA The really fun stuff
 ### Managing Backup Locations
 Add a backup location:
 ```
