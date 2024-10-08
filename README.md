@@ -1,6 +1,6 @@
 # SimpleGit
 
-## Git for idiots
+## Git for idiots, for if cloud computing P&!£%S you off
 
 SimpleGit is a beginner-friendly local version control system that provides basic functionalities for managing your code changes without cloud integration.
 
