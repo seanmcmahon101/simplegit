@@ -1,12 +1,3 @@
-"""
-SimpleGit: An Advanced Beginner-Friendly Local Version Control System
-
-This script provides comprehensive version control functionalities such as initializing
-a repository, committing changes, viewing logs, managing branches, viewing diffs, merging,
-tagging commits, and checking the status of the repository. All changes are stored locally,
-leveraging the speed and flexibility of local operations without any cloud integrations.
-"""
-
 import os
 import sys
 import argparse
