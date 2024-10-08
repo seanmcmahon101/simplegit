@@ -620,7 +620,7 @@ def main():
       pull_commit(args)
   elif args.command == 'backup':
       backup_changes(args)
-  elif args.command == 'backup-loc':
+  elif args.command == ['backup-loc', 'bl']:
       if args.backup_command == 'add':
           add_backup_location(args)
       elif args.backup_command == 'remove':
