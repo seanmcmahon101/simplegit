@@ -17,7 +17,7 @@ control system that's easy to use and doesn't require cloud integration. Perfect
 
 ### Step 1: Obtain SimpleGit
 
-#### Option A: Cloning the Repository
+#### Option A: Cloning the Repository, works if you ironically have Git installed, if not refer to option B
 1. Open your terminal or command prompt.
 2. Navigate to the directory where you want to store SimpleGit.
 3. Run the following command:
